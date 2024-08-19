@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+
+    <form id="todo-form">
+      <div class="form-group">
+        <label for="todo-input">할 일 내용 *</label>
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="할 일을 입력해 주세요"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="alarm-time">알림 시간</label>
+        <input
+          type="datetime-local"
+          id="alarm-time"
+          placeholder="알림 시간을 설정해주세요"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="tag-input">태그</label>
+        <input
+          type="text"
+          id="tag-input"
+          placeholder="태그를 입력해주세요 (각 태그는 띄어쓰기로 구분해주세요)"
+        />
+      </div>
+
+      <button type="submit" id="add-btn">추가하기</button>
+    </form>
+
+    <div id="error-message"></div>
+
+    <ul id="todo-list"></ul>
+
+    <p>미완료된 할 일: <span id="remaining-count">0</span></p>
+
+    <script src="app.js"></script>
+  </body>
+</html>
